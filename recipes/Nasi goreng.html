@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStart</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link rel="website icon" type="png" href="../img/Food Start.png">
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+
+    <style>
+        *{
+            transition: 2s;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        .Nav{
+            height: 75px ;
+            color: rgb(243, 238, 238);
+        }
+        .Nav h1{
+            margin-left: 100px;
+            font-size: 28px;
+        }
+        body{
+            background-image: url(../img/BG\ 2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .Gambar{
+            width: 400px;
+        }
+        .Gambar:hover{
+            transform: scale(1.1);
+        }
+        .div1{
+            display: flex;
+        }
+        .over{
+            overflow: hidden;
+        }
+        .body{
+            justify-content:space-around;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        .bahan, .langkah{
+            background-color: rgb(223, 223, 223);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            width: 47%;
+        }
+        .headbody{
+            background-color: rgb(223, 223, 223);
+            padding: 10px;
+            width: 95%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .foot{
+            width: 100%;
+            height: 250px;
+            justify-content: center; 
+            align-items: center;
+        }
+        .logofoot{
+            text-decoration: none;
+        }
+        .logofooter , .logofooter2{
+            width: 80px;
+            height: 90px;
+            text-decoration: none;
+        }
+        .logofooter img{
+            width: 45px;
+            height: 40px;
+        }
+        .logofooter2 .img2{
+            width: 50px;
+            height: 50px;
+        }
+        .logo, .logo2{
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            text-align: center;
+        }
+        .logo p{
+            color:white;
+            margin-top: 3px;
+            
+        }
+        .logofooter2:hover{
+            animation: logo2 10s infinite;
+            transition: 1s;
+        }
+        .logofooter:hover{
+            animation: logo 10s infinite;
+            transition: 1s;
+        }
+        @keyframes logo2{
+            10%{
+                background: blue;
+            }
+            100%{
+                background: skyblue;
+            }
+        }
+        @keyframes logo{
+            10%{
+                background: purple;
+            }
+            100%{
+                background-color: blueviolet;
+            }
+        }
+        @media screen and (max-width:500px) {
+            btn{
+                height: 50px;
+            }
+            .Nav h2{
+                font-size: 20px;
+            }
+            .Gambar{
+                width: 300px;
+            }
+            .div1{
+                margin: auto;
+            }
+            .headbody{
+                flex-direction: column;
+            }
+            .body{
+                flex-direction: column;
+                margin-top: 25px;
+            }
+            .langkah, .bahan{
+                width: 100%;
+            }
+            .langkah{
+                margin-top: 15px;
+            }
+            .foot{
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="Nav bg-success container-fluid ">
+        <div class="container d-flex ">
+            <a href="../index.html" class="btn btn-success btn-outline-warning mt-3">Kembali</a>
+            <h1 class="mt-3 mt-md-3 ms-5">Nasi Goreng</h2>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Body-->
+    <section class="container-fluid d-flex headbody mt-1 rounded">
+        <div class="d-flex div1">
+            <div class="d-flex over">
+                <img class=" Gambar rounded" src="../img/Nasi goreng.jpg">
+            </div>
+        </div>
+        <div class="ms-1 ms-md-5 mt-2 DES">
+            <h2>Nasi goreng</h2>
+            <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa 
+                berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah 
+                tertentu dan kecap manis.
+            </p>
+        </div>
+    </section>
+
+    <section class="container-fluid d-flex body">
+        <div class="bahan rounded ">
+            <h4>Bahan-bahan yang diperlukan dalam pembuatan Nasi goreng :</h4>
+            <ul>
+                <li>500 gr nasi pulen</li>
+                <li>100 gr charsiu BBQ chicken</li>
+                <li>100 gr udang kupas</li>
+                <li>3 butir telur ayam</li>
+                <li>5 gr daun bawang iris kasar</li>
+                <li>10 gr garam</li>
+                <li>10 gr kaldu ayam bubuk</li>
+                <li>1 sdt kecap asin</li>
+            </ul>
+        </div>
+        <div class="langkah rounded">
+            <h4>Langkah-langkah dalam pembuatan Nasi goreng :</h4>
+            <ol>
+                <li>Cuci udang lalu potong-potong</li>
+                <li>Potong-potong ayam panggang.</li>
+                <li>Panaskan minyak dalam wajan, masukkan udang dan ayam.</li>
+                <li>Masak sebentar hingga matang. Tiriskan.</li>
+                <li>Panaskan sedikit minyak dalam wajan.</li>
+                <li>Masukkan telur, aduk hingga bergumpal dan matang.</li>
+                <li>Masukkan nasi, aduk-aduk hingga terurai.</li>
+                <li>Tambahkan udang dan ayam panggang. Aduk rata.</li>
+                <li>Bumbu dengan garam, kaldu ayam bubuk dan kecap.</li>
+                <li>Aduk-aduk hingga rata lalu angkat.</li>
+            </ol>
+        </div>
+    </section>
+    <!--End Body-->
+
+    <!--Footer-->
+    <footer class="d-flex bg-success foot">
+        <div class=" d-flex flex-column">
+            <div class="d-flex logofoot">
+                <a href="https://www.instagram.com/farel13579/">
+                    <div class="logofooter me-xl-5 me-4 rounded">
+                        <div class="logo">
+                            <img class="mt-1" src="../img/Logo IG.png">
+                            <p style="margin-top: 13px;">Instagram</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://portofoliosfcp.000webhostapp.com">
+                    <div class="logofooter2 me-xl-5 me-4 rounded">
+                        <div class="logo">
+                            <img class="mt-1 img2" src="../img/Logo porto.png">
+                            <p>Portofolio</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <p class="by text-light">By Satria Farel Cipta Permata</p>
+        </div>
+    </footer>
+    <!--End Footer-->
+</body>
+</html>

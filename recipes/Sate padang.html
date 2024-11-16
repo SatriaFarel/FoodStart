@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStart</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link rel="website icon" type="png" href="../img/Food Start.png">
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+
+    <style>
+        *{
+            transition: 2s;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        .Nav{
+            height: 75px ;
+            color: rgb(243, 238, 238);
+        }
+        .Nav h1{
+            margin-left: 100px;
+            font-size: 28px;
+        }
+        body{
+            background-image: url(../img/BG\ 2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .Gambar{
+            width: 400px;
+        }
+        .Gambar:hover{
+            transform: scale(1.1);
+        }
+        .div1{
+            display: flex;
+        }
+        .over{
+            overflow: hidden;
+        }
+        .body{
+            justify-content:space-around;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        .bahan, .langkah{
+            background-color: rgb(223, 223, 223);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            width: 47%;
+        }
+        .headbody{
+            background-color: rgb(223, 223, 223);
+            padding: 10px;
+            width: 95%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .foot{
+            width: 100%;
+            height: 250px;
+            justify-content: center; 
+            align-items: center;
+        }
+        .logofoot{
+            text-decoration: none;
+        }
+        .logofooter , .logofooter2{
+            width: 80px;
+            height: 90px;
+            text-decoration: none;
+        }
+        .logofooter img{
+            width: 45px;
+            height: 40px;
+        }
+        .logofooter2 .img2{
+            width: 50px;
+            height: 50px;
+        }
+        .logo, .logo2{
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            text-align: center;
+        }
+        .logo p{
+            color:white;
+            margin-top: 3px;
+            
+        }
+        .logofooter2:hover{
+            animation: logo2 10s infinite;
+            transition: 1s;
+        }
+        .logofooter:hover{
+            animation: logo 10s infinite;
+            transition: 1s;
+        }
+        @keyframes logo2{
+            10%{
+                background: blue;
+            }
+            100%{
+                background: skyblue;
+            }
+        }
+        @keyframes logo{
+            10%{
+                background: purple;
+            }
+            100%{
+                background-color: blueviolet;
+            }
+        }
+        @media screen and (max-width:500px) {
+            btn{
+                height: 50px;
+            }
+            .Nav h2{
+                font-size: 20px;
+            }
+            .Gambar{
+                width: 300px;
+            }
+            .div1{
+                margin: auto;
+            }
+            .headbody{
+                flex-direction: column;
+            }
+            .body{
+                flex-direction: column;
+                margin-top: 25px;
+            }
+            .langkah, .bahan{
+                width: 100%;
+            }
+            .langkah{
+                margin-top: 15px;
+            }
+            .foot{
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="Nav bg-success container-fluid ">
+        <div class="container d-flex ">
+            <a href="../index.html" class="btn btn-success btn-outline-warning mt-3">Kembali</a>
+            <h1 class="mt-3 mt-md-3 ms-5">Sate padang</h2>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Body-->
+    <section class="container-fluid d-flex headbody mt-1 rounded">
+        <div class="d-flex div1">
+            <div class="d-flex over">
+                <img class=" Gambar rounded" src="../img/Sate Padang.jpg">
+            </div>
+        </div>
+        <div class="ms-1 ms-md-5 mt-2 DES">
+            <h2>Sate Padang</h2>
+            <p>Sate padang adalah sebutan untuk tiga jenis varian sate di Sumatera Barat, yaitu Sate Padang, 
+                Sate Padang Panjang, dan Sate Pariaman. Namun karena adanya ekslusivitas istilah makanan, istilah sate Padang 
+                tidak digunakan di Sumatera Barat yang hanya merujuk pada sate daging, lidah, dan jeroan; sedangkan istilah ini 
+                hanya digunakan di luar Sumatera Barat.
+            </p>
+        </div>
+    </section>
+
+    <section class="container-fluid d-flex body">
+        <div class="bahan rounded ">
+            <h4>Bahan-bahan yang diperlukan dalam pembuatan sate padang :</h4>
+            <ul>
+                <li>500 g daging has dalam sapi</li>
+                <li>3 sdm minyak sayur</li>
+                <li>tusuk sate</li>
+                Bumbu Halus:
+                <li>3 siung bawang putih</li>
+                <li>1 sdt ketumbar</li>
+                <li>1/2 sdt merica butiran</li>
+                <li>2 sdm bawang merah goreng</li>
+                <li>1 sdt gula pasir</li>
+                <li>2 sdt garam</li>
+                Bumbu Kacang:
+                <li>250 ml air</li>
+                <li>2 buah jeruk limau</li>
+                Haluskan:
+                <li>10 g gula merah</li>
+                <li>50 g kacang tanah goreng</li>
+                <li>1 siung bawang putih</li>
+                <li>2 buah cabe merah keriting</li>
+                <li>1 sdt garam</li>
+            </ul>
+        </div>
+        <div class="langkah rounded">
+            <h4>Langkah-langkah dalam pembuatan sate padang :</h4>
+            <ol>
+                <li>Potong-potong daging sapi melintang serat lalu potong ukuran 2x2 cm.</li>
+                <li>Aduk potongan daging dengan Bumbu Halus dan minyak hingga rata. Diamkan selama 30 menit.</li>
+                <li>Tusuki tiap 3-4 potong daging dengan tusuk sate.</li>
+                <li>Bakar sate di atas bara api sambil balik-balik hingga matang kedua sisinya lalu angkat.</li>
+                <li>Bumbu Kacang: Campur bumbu halus dengan air, masak sebentar hingga agak kental lalu angkat.</li>
+                <li>Kucuri air jeruk limau, aduk rata. Biarkan hingga dingin.</li>
+                <li>Sajikan sate sapi hangat dengan Bumbu Kacang.</li>
+            </ol>
+        </div>
+    </section>
+    <!--End Body-->
+
+    <!--Footer-->
+    <footer class="d-flex bg-success foot">
+        <div class=" d-flex flex-column">
+            <div class="d-flex logofoot">
+                <a href="https://www.instagram.com/farel13579/">
+                    <div class="logofooter me-xl-5 me-4 rounded">
+                        <div class="logo">
+                            <img class="mt-1" src="../img/Logo IG.png">
+                            <p style="margin-top: 13px;">Instagram</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://portofoliosfcp.000webhostapp.com">
+                    <div class="logofooter2 me-xl-5 me-4 rounded">
+                        <div class="logo">
+                            <img class="mt-1 img2" src="../img/Logo porto.png">
+                            <p>Portofolio</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <p class="by text-light">By Satria Farel Cipta Permata</p>
+        </div>
+    </footer>
+    <!--End Footer-->
+</body>
+</html>
