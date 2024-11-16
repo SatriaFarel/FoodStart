@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodStart</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="website icon" type="png" href="img/Food Start.png">
+    <script src="lib/bootstrap/bootstrap.min.js">
+    </script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        --farel--{
+            background-color: red;
+        }
+        *{
+            transition:transform 1s;
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url(img/BG\ 2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+        nav{
+            background-image: url(img/bg\ nav.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: -webkit-sticky;
+        }
+        .input{
+            width: 300px;
+            padding-left: 5px;
+        }
+        .img{
+            height: 550px;
+            width: 1500px;
+            cursor: pointer;
+            filter: brightness(60%);
+        }
+        .carousel-item h5{
+            text-decoration:none;
+            color: white;
+        }
+        .menu{
+            margin-left: 100px;
+        }
+        .kartu{
+            width: 283px;
+            height: 200px;
+            margin-left: -11px;
+        }
+        .product{
+            overflow: hidden;
+        }
+        .kartu:hover{
+            transform: scale(1.1);
+            transform:translateX(45deg);
+        }
+        .foot{
+            width: 100%;
+            height: 250px;
+            justify-content: center; 
+            align-items: center;
+        }
+        .logofoot{
+            text-decoration: none;
+            flex-direction: column;
+        }
+        .logofooter , .logofooter2{
+            width: 80px;
+            height: 90px;
+            text-decoration: none;
+        }
+        .logofooter img{
+            width: 45px;
+            height: 40px;
+        }
+        .logofooter2 .img2{
+            width: 50px;
+            height: 50px;
+        }
+        .logo, .logo2{
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            text-align: center;
+        }
+        .logo p{
+            color:white;
+            margin-top: 3px;
+            
+        }
+        .logofooter2:hover{
+            animation: logo2 10s infinite;
+            transition: 1s;
+        }
+        .logofooter:hover{
+            animation: logo 10s infinite;
+            transition: 1s;
+        }
+        @keyframes logo2{
+            10%{
+                background: blue;
+            }
+            100%{
+                background: skyblue;
+            }
+        }
+        @keyframes logo{
+            10%{
+                background: purple;
+            }
+            100%{
+                background-color: blueviolet;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .Name{
+                display: none;
+            }
+            .input{
+                width: 150px;
+                height: 30px;
+                margin-top: 5px;
+            }
+            .menu{
+                display: none;
+            }
+            .img{
+                width: 500px;
+                height: 300px;
+            }
+            btn{
+                height: 30px;
+            }
+            .menu{
+                margin-left: 5px;
+            }
+            .kartu{
+                width: 350px;
+                height: 190px;
+                margin-left: -12px;
+            }
+            .product{
+                margin-left: 33px;
+            }
+            .foot{
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body class="w-full">
+    <script>
+        function search(){
+            var cari = document.getElementById("input").value;
+            if(cari=="Rendang" || cari=="rendang"){
+                document.location.href = 'recipes/Rendang.html'
+            }
+            else if(cari=="sate padang" || cari=="Sate padang" || cari=="Sate Padang"){
+                document.location.href = 'recipes/Sate padang.html'
+            }
+            else if(cari=="nasi goreng" || cari=="Nasi goreng" || cari=="Nasi Goreng"){
+                document.location.href = 'recipes/Nasi Goreng.html'
+            }
+            else if(cari=="Rawon" || cari=="rawon"){
+                document.location.href = 'recipes/Rawon.html';
+            }
+            else if(cari=="Pempek" || cari=="pempek"){
+                document.location.href = 'recipes/Pempek.html';
+            }
+            else if(cari=="Mie aceh" || cari=="mie aceh" || cari=="Mie Aceh"){
+                document.location.href = 'recipes/Mie aceh.html';
+            }
+            else if(cari=="Soto betawi" || cari=="Soto Betawi" || cari=="soto betawi"){
+                document.location.href = 'recipes/Soto betawi.html';
+            }
+            else{
+                alert("Input yang anda masukan tidak ada!!!");
+            }
+        }
+    </script>
+    <!--Navbar-->
+    <nav class="navbar container-fluid w-full">
+        <div class="container-fluid">
+            <div>
+                <img style="width: 50px; height: 50px;" class="rounded" src="img/Food Start.png">
+                <a class="navbar-brand text-light Name mt-1">FoodStart</a>
+            </div>
+            <div class="d-flex">
+                <input id="input" class="me-2 input" placeholder="Pencarian" type="search">
+                <button onclick="search()" id="btn" class="btn btn-warning btn-outline-success">Cari</button>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Banner-->
+    <div class="container mt-1">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="recipes/Rendang.html">
+                <img src="img/Rendang.jpg" class="d-block img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Rendang</h5>
+                </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="recipes/Sate padang.html">
+                <img src="img/Sate Padang.jpg" class="d-block img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Sate Padang</h5>
+                </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="recipes/Rawon.html">
+                <img src="img/Rawon.jpg" class="d-block img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Rawon</h5>
+                </a>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--End Navbar-->
+
+    <!--Menu-->
+    <div class="mt-5 menu" >
+        <a href="List makanan.html" class="btn btn-warning btn-outline-success ">List Makanan Daerah </a>
+    </div>
+    <!--End Menu-->
+
+    <!--Produk-->
+    <div class="container-fluid mt-3 mb-3">
+        <div class="container p-2">
+            <h2 class="text-dark">Makanan Daerah </h2>
+            <div class="d-flex row">
+                <div class="card mt-5 col-xl-3 col-10 me-xl-5 shadow-lg border-1 border-secondary product" >
+                    <img src="img/Soto Betawi.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Soto Betawi</h5>
+                    <p class="card-text">Soto Betawi adalah makanan dengan berbahan dasar daging sapi yang khas
+                        dari jakarta
+                    </p>
+                    <a href="recipes/Soto betawi.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+                <div class="card mt-5 col-xl-3 col-10 me-xl-5 shadow-lg border-1 border-secondary product">
+                    <img src="img/Nasi Goreng.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Nasi Goreng</h5>
+                    <p class="card-text">Nasi Goreng adalah makanan khas indonesia yang terbuat dari nasi yang digoreng
+                        dengan bumbu-bumbu rempah.
+                    </p>
+                    <a href="recipes/Nasi goreng.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+                <div class="card mt-5 col-xl-3 col-10 me-xl-5 shadow-lg border-1 border-secondary product">
+                    <img src="img/Sate Padang.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Sate Padang</h5>
+                    <p class="card-text">Satai padang atau yang sering disebut dengan sate padang adalah makanan khas daerah 
+                        Padang, Sumatera Barat. Berbeda dengan satai berbumbu kacang yang khas di Jawa, satai Padang ini 
+                        justru memiliki kuah yang kental.</p>
+                    <a href="recipes/Sate padang.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+                <div class="card mt-5 col-xl-3 col-10 me-xl-5 shadow-lg border-1 border-secondary product">
+                    <img src="img/Rawon2.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Rawon</h5>
+                    <p class="card-text"> Rawon adalah makanan berkuah hitam yang dibuat dari aneka bumbu, rempah, dan 
+                        potongan daging sapi, yang paling populer di Surabaya.</p>
+                    <a href="recipes/Rawon.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+                <div class="card mt-5 col-xl-3 col-10 me-xl-5 shadow-lg border-1 border-secondary product">
+                    <img src="img/Mie Aceh.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Mie Aceh</h5>
+                    <p class="card-text"> Mi aceh adalah masakan mi pedas khas Aceh di Indonesia. Mi kuning tebal dengan irisan 
+                        daging sapi, daging kambing atau makanan laut (udang dan cumi) disajikan dalam sup sejenis kari 
+                        yang gurih dan pedas.</p>
+                    <a href="recipes/Mie aceh.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+                <div class="card mt-5 col-xl-3 col-10 shadow-lg border-1 border-secondary product">
+                    <img src="img/Pempek.jpg" class="card-img-top kartu mx-auto" alt="...">
+                    <div class="card-body">
+                    <hr style="color: seagreen;">
+                    <h5 class="card-title">Pempek</h5>
+                    <p class="card-text"> Pempek adalah hidangan tradisional asal Palembang yang dibuat dari daging ikan yang 
+                        digiling dan tepung, serta komposisi bahan lain, seperti telur, penyedap rasa, dan garam.</p>
+                    <a href="recipes/Pempek.html" class="btn btn-warning btn-outline-success">Lihat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Produk-->
+
+    <!--accordian-->
+    <div class="container-fluid mb-5 mt-2">
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Apasih yang dimaksud dengan makanan daerah?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Makanan khas daerah adalah makanan yang biasa dikonsumsi di suatu daerah dengan karakter 
+                        yang mencerminkan budaya dan iklim masyarakat setempat. Setiap daerah memiliki teknik pengolahan, 
+                        bahan, dan cita rasa yang berbeda-beda yang membuatnya menjadi ciri khas dari daerah tersebut. 
+                        Makanan khas daerah biasanya cocok dengan lidah masyarakat daerah tersebut dan sering dijadikan 
+                        sebagai identitas daerah.
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Apa sih peran pentingnya makanan daerah?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Makanan khas daerah memiliki peran penting dalam mempertahankan identitas budaya suatu wilayah. 
+                        Dengan melestarikan makanan khas daerah, kita juga dapat menjaga warisan leluhur yang menjadi 
+                        bagian tak terpisahkan dari sejarah dan kearifan lokal.
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Kenapa di indonesia memiliki banyak makanan daerah?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Makanan tradisional Indonesia sangat beragam karena beberapa alasan:</p>
+                        <p>1. Bahan Baku yang Berbeda: Indonesia memiliki tanah subur yang memungkinkan tumbuhnya berbagai 
+                        rempah-rempah. Setiap daerah punya rempah khas yang memberikan rasa unik pada makanannya.</p>
+                        <p>2. Keanekaragaman Budaya: Karena Indonesia terdiri dari ribuan pulau, setiap pulau 
+                        menghasilkan bahan makanan berbeda. Ini mendorong orang menciptakan makanan khas di setiap daerah.</p>
+                        <p>3. Warisan Budaya: Resep makanan tradisional sering diturunkan secara turun-temurun. 
+                        Makanan tradisional adalah bagian dari warisan budaya kita yang harus dijaga.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End accordion-->
+
+    <!--Footer-->
+    <footer class="d-flex bg-success foot">
+            <div class="d-flex logofoot">
+                <div class="d-flex">
+                    <a href="https://www.instagram.com/farel13579/">
+                        <div class="logofooter me-xl-5 me-4 rounded">
+                            <div class="logo">
+                                <img class="mt-1" src="img/Logo IG.png">
+                                <p style="margin-top: 13px;">Instagram</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://portofoliosfcp.000webhostapp.com">
+                        <div class="logofooter2 me-xl-5 me-4 rounded">
+                            <div class="logo">
+                                <img class="mt-1 img2" src="img/Logo porto.png">
+                                <p>Portofolio</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <p class="by text-light">By Satria Farel Cipta Permata</p>
+            </div>
+    </footer>
+    <!--End Footer-->
+</body>
+</html>
