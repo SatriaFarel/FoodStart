@@ -1,15 +1,15 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/list-makanan", "destination": "/List makanan.html" },
-    { "source": "/rendang", "destination": "/Rendang.html" },
-    { "source": "/nasi-goreng", "destination": "/Nasi goreng.html" },
-    { "source": "/soto-betawi", "destination": "/Soto betawi.html" }
+    { "source": "/", "destination": "/recipes/index.html" },
+    { "source": "/list-makanan", "destination": "/recipes/List makanan.html" },
+    { "source": "/rendang", "destination": "/recipes/Rendang.html" },
+    { "source": "/nasi-goreng", "destination": "/recipes/Nasi goreng.html" },
+    { "source": "/soto-betawi", "destination": "/recipes/Soto betawi.html" }
   ],
   "redirects": [
-    { "source": "/List makanan.html", "destination": "/list-makanan", "permanent": true },
-    { "source": "/Rendang.html", "destination": "/rendang", "permanent": true },
-    { "source": "/Nasi goreng.html", "destination": "/nasi-goreng", "permanent": true },
-    { "source": "/Soto betawi.html", "destination": "/soto-betawi", "permanent": true }
+    { "source": "/recipes/List makanan.html", "destination": "/list-makanan", "permanent": true },
+    { "source": "/recipes/Rendang.html", "destination": "/rendang", "permanent": true },
+    { "source": "/recipes/Nasi goreng.html", "destination": "/nasi-goreng", "permanent": true },
+    { "source": "/recipes/Soto betawi.html", "destination": "/soto-betawi", "permanent": true }
   ]
 }
